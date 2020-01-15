@@ -1,6 +1,3 @@
-provider "aws" {
-}
-
 module "role" {
   source = "git::https://github.com/woz5999/terraform-aws-iam-role.git?ref=upgrade-0.12"
 
@@ -47,4 +44,3 @@ data "aws_iam_policy_document" "log_agent" {
     resources = aws_cloudwatch_log_group.default.*.arn
   }
 }
-
